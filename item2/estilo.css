@@ -1,0 +1,16 @@
+/*estilo*/
+
+body{
+	margin: 0 auto;
+	width: 50%;
+}
+#quadro{
+	margin:0 auto;
+	width:400px;
+	background-color:#000;
+}
+h1{
+	font-style: italic;
+	text-align: center;
+	color:#FFFFFF;
+}
