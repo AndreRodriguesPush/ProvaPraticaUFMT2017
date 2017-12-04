@@ -2,13 +2,9 @@
 
 class Produto
 {
-
     private $nome;
-
     private $valorCompra;
-
     private $valorVenda;
-
     private $quantidade;
 
     public function getNome()
@@ -55,6 +51,7 @@ class Produto
     {
         $this->valorCompra = $valorCompra;
         $this->quantidade = $quantidade;
+        
         $valorEstoque = $valorCompra * $quantidade;
         return $valorEstoque;
     }
@@ -71,10 +68,10 @@ class Produto
         
         
        $valorEstoque = $this->calcularValorEstoque($this->valorCompra , $this->quantidade);
-       var_dump($valorEstoque);
+       echo "-".var_dump($valorEstoque);
        
        $valorTotVenda = $this->calcularValorTotalVenda($this->valorVenda , $this->quantidade); 
-       var_dump($valorTotVenda);
+       echo "-".var_dump($valorTotVenda);
        
        $total = $valorEstoque - $valorTotVenda;
        var_dump($total);
@@ -82,8 +79,7 @@ class Produto
        return $total;
     }
 }    
-
 $produto = new Produto();
-echo "Calcula Valor Estoque: ".$produto->calcularValorEstoque(300,10);
+echo "Calcula Valor Estoque: ".$produto->calcularValorEstoque(3000,10);
 echo "\nCalcula Valor Total Venda: ".$produto->calcularValorEstoque(100,30);
 echo "\nCalcular Lucro Bruto: ".$produto->calcularLucroBruto();
