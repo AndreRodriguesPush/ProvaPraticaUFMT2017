@@ -1,0 +1,1 @@
+SELECT aluno.nome FROM aluno,cursa,disciplina WHERE aluno.cpf = cursa.cpfaluno and cursa.codigodisciplina = disciplina.codigo AND disciplina.cpfprofessor = '000.111.222-33' 
